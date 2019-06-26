@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<h1>Result</h1>
+<div class="container">
+    <h2 th:text="'json: ' + ${email.toJson()}" />
+    <a class="btn btn-primary btn-lg active" th:href="'mailto:genci.strazimiri@td.com?subject=jsontrigger&body='+${email.toJson()}">Send email </a>
+
+</div>
+
+</body>
+</html>
